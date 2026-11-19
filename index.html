@@ -536,7 +536,7 @@ body { margin: 0; height: 100vh; display: flex; justify-content: center; align-i
             <div class="alt-buton-wrapper">
                 <div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('ankaraSayfaIcerik', 'ankara')">
                     <span id="t_baslikGirisAnkara"></span>
-                    <img src="./img/Ankara_Metro_Logo.svg" alt="Ankara Logosu" style="border-radius: 0;">
+                    <img src="./img/Ankara_Metro_logo.svg" alt="Ankara Logosu" style="border-radius: 0;">
                 </div>
             </div>
             <div class="alt-buton-wrapper">
@@ -560,7 +560,7 @@ body { margin: 0; height: 100vh; display: flex; justify-content: center; align-i
             <div class="alt-buton-wrapper">
                 <div class="hat-butonu alt-buton" onclick="digerSehirlerKollariAcKapa()">
                     <span id="t_baslikGirisDigerSehirler"></span>
-                    <img src="./img/Istanbul_Metro_Logo.svg" alt="Diğer Şehirler" style="border-radius: 0;">
+                    <img src="" alt="Diğer Şehirler" style="border-radius: 0;">
                 </div>
                 <div class="ibb-alt-kollar" id="digerSehirlerAltKollar">
                     <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('adanaSayfaIcerik', 'adana')"><span id="t_baslikGirisAdana"></span></div></div>
@@ -590,7 +590,7 @@ body { margin: 0; height: 100vh; display: flex; justify-content: center; align-i
     <div class="insa-wrapper">
         <div class="hat-butonu" onclick="sehirAltKolAcKapa('ankaraIsletmeAltKollar', 'ankaraSayfaIcerik')">
             <span>İşletmedeki Hatlar</span>
-            <img src="./img/Ankara_Metro_logo.svg" alt="Ankara" style="border-radius: 0;">
+            <img src= alt="Ankara" style="border-radius: 0;">
         </div>
         <div class="alt-kollar" id="ankaraIsletmeAltKollar">
             <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'ANK_A1', '#009A4C')"><span id="t_ankA1"></span><img src="./img/Ankaray_logo.svg" alt="A1 Logosu" style="border-radius: 0;"></div></div>
@@ -1344,63 +1344,6 @@ function istasyonNoktalariGosterGizle() {
     });
 }
 
-function istasyonNoktalariGosterGizle() {
-    const goster = document.getElementById("istasyonNoktaCheck")?.checked ?? true;
-    if (!map || !lineGroup) return;
-
-    lineGroup.eachLayer(layer => {
-        const islem = sub => {
-            if (sub instanceof L.CircleMarker) {
-                if (goster) {
-                    if (!map.hasLayer(sub)) sub.addTo(map);
-                } else {
-                    if (map.hasLayer(sub)) map.removeLayer(sub);
-                }
-            }
-        };
-        if (layer.eachLayer) layer.eachLayer(islem);
-        else islem(layer);
-    });
-}
-
-function istasyonNoktalariGosterGizle() {
-    const goster = document.getElementById("istasyonNoktaCheck")?.checked ?? true;
-    if (!map || !lineGroup) return;
-
-    lineGroup.eachLayer(layer => {
-        const islem = sub => {
-            if (sub instanceof L.CircleMarker) {
-                if (goster) {
-                    if (!map.hasLayer(sub)) sub.addTo(map);
-                } else {
-                    if (map.hasLayer(sub)) map.removeLayer(sub);
-                }
-            }
-        };
-        if (layer.eachLayer) layer.eachLayer(islem);
-        else islem(layer);
-    });
-}
-
-function istasyonNoktalariGosterGizle() {
-    const goster = document.getElementById("istasyonNoktaCheck")?.checked ?? true;
-    if (!map || !lineGroup) return;
-
-    lineGroup.eachLayer(layer => {
-        const islem = sub => {
-            if (sub instanceof L.CircleMarker) {
-                if (goster) {
-                    if (!map.hasLayer(sub)) sub.addTo(map);
-                } else {
-                    if (map.hasLayer(sub)) map.removeLayer(sub);
-                }
-            }
-        };
-        if (layer.eachLayer) layer.eachLayer(islem);
-        else islem(layer);
-    });
-}
-
 function tarihceGuncelle(hatKodu) {
     const kutu = document.getElementById("tarihceKutusu");
     const icerik = document.getElementById("tarihceIcerik");
@@ -1432,7 +1375,7 @@ const BOLGESEL_HAT_GRUPLARI = {
     kocProje:     { ad: "Kocaeli Proje",           kodlar: ["KOC_M4"] },
     
     // YENİ EKLENEN ŞEHİRLER
-    burIsletme:   { ad: "Bursa İşletmedeki",      kodlar: ["BUR_M1", "BUR_M2", "BUR_T1", "BUR_T2", "BUR_T3"] },
+    burIsletme: { ad: "Bursa İşletmedeki", kodlar: ["BUR_M1", "BUR_M2", "BUR_T2"] },
     burInsa:      { ad: "Bursa İnşa Halindeki",   kodlar: ["BUR_M1_UZATMA"] },
     adaIsletme:   { ad: "Adana İşletmedeki",      kodlar: ["ADA_M1"] },
     samIsletme:   { ad: "Samsun İşletmedeki",     kodlar: ["SAM_T1"] },
@@ -1446,7 +1389,6 @@ const BOLGESEL_HAT_GRUPLARI = {
     traInsa:      { ad: "Trabzon İnşa Halindeki", kodlar: ["TRA_T1"] },
     skrInsa:      { ad: "Sakarya İnşa Halindeki", kodlar: ["SKR_T1"] },
     antIsletme: { ad: "Antalya İşletmedeki", kodlar: ["ANT_T3", "ANT_T1"] },
-    burIsletme: { ad: "Bursa İşletmedeki", kodlar: ["BUR_M1", "BUR_M2", "BUR_T2"] },
     kayIsletme:   { ad: "Kayseri İşletmedeki",    kodlar: ["KAY_T1", "KAY_T2", "KAY_T3","KAY_T4"] },
     kayProje: { ad: "Kayseri Proje", kodlar: ["KAY_T5"] },
 
@@ -3927,7 +3869,7 @@ function haritaAc(e, hatKodu, renk) {
             pointToLayer: (f, latlng) => { 
                 let m = L.circleMarker(latlng, {
                     radius: hesaplaNoktaYaricapi(map.getZoom(), hatKodu), 
-                    fillColor: f.properties?.colour || hatCizgiRengi, 
+                    fillColor: hatCizgiRengi,
                     color: "#fff", 
                     weight: 2, 
                     fillOpacity: 1
@@ -4016,7 +3958,8 @@ function insaHalindekiTumHatlariGoster() {
             };
         },
         pointToLayer: (f, latlng) => {
-            let noktaRengi = f.properties?.colour;
+            const ref = (f.properties?.ref || "").toUpperCase();
+            let noktaRengi = refRenkleri[ref];
 
             if (!noktaRengi && f.properties?.["@relations"]) {
                 for (let r of f.properties["@relations"]) {
@@ -4115,11 +4058,12 @@ function seciliGrupHatlariniGoster(hedefKodlar, stilTipi) {
     if (lineGroup) lineGroup.clearLayers();
     stationMarkers = {};
 
+    const hedefKodlarBuyuk = hedefKodlar.map(k => k.toUpperCase());
     const refRenkleri = {};
     tumHatlarVerisi.features.forEach(f => {
         if (f.geometry.type !== "Point" && f.properties?.ref && f.properties?.colour) {
             const ref = f.properties.ref.toUpperCase();
-            if (!refRenkleri[ref]) {
+            if (hedefKodlarBuyuk.includes(ref) && !refRenkleri[ref]) {
                 refRenkleri[ref] = f.properties.colour;
             }
         }
@@ -4152,7 +4096,8 @@ function seciliGrupHatlariniGoster(hedefKodlar, stilTipi) {
             };
         },
         pointToLayer: (f, latlng) => {
-            let noktaRengi = f.properties?.colour;
+            const ref = (f.properties?.ref || "").toUpperCase();
+            let noktaRengi = refRenkleri[ref];
             if (!noktaRengi && f.properties?.["@relations"]) {
                 for (let r of f.properties["@relations"]) {
                     const rRef = (r.reltags?.ref || "").toUpperCase();
@@ -4162,6 +4107,7 @@ function seciliGrupHatlariniGoster(hedefKodlar, stilTipi) {
                     }
                 }
             }
+            if (!noktaRengi) noktaRengi = f.properties?.colour;
 
             const marker = L.circleMarker(latlng, {
                 radius: hesaplaNoktaYaricapi(map.getZoom()),
@@ -4293,7 +4239,8 @@ function isletmedekiTumMetrolariGoster() {
         },
         
         pointToLayer: (f, latlng) => {
-            let noktaRengi = f.properties?.colour;
+            const ref = (f.properties?.ref || "").toUpperCase();
+            let noktaRengi = refRenkleri[ref];
 
             if (!noktaRengi && f.properties?.["@relations"]) {
                 for (let r of f.properties["@relations"]) {
@@ -4348,11 +4295,12 @@ function projeHalindekiTumHatlariGoster() {
         "M4KURTKOY", "M5KURTKOY", "M7ESENYURT", "M20", "M34", "M", "T"
     ];
 
+    const hedefKodlarBuyuk = hedefKodlar.map(k => k.toUpperCase());
     const refRenkleri = {};
     tumHatlarVerisi.features.forEach(f => {
         if (f.geometry.type !== "Point" && f.properties?.ref && f.properties?.colour) {
             const ref = f.properties.ref.toUpperCase();
-            if (!refRenkleri[ref]) {
+            if (hedefKodlarBuyuk.includes(ref) && !refRenkleri[ref]) {
                 refRenkleri[ref] = f.properties.colour;
             }
         }
@@ -4384,7 +4332,8 @@ function projeHalindekiTumHatlariGoster() {
             };
         },
         pointToLayer: (f, latlng) => {
-            let noktaRengi = f.properties?.colour;
+            const ref = (f.properties?.ref || "").toUpperCase();
+            let noktaRengi = refRenkleri[ref];
 
             if (!noktaRengi && f.properties?.["@relations"]) {
                 for (let r of f.properties["@relations"]) {
@@ -4441,7 +4390,7 @@ function tumTramvayHatlariGoster() {
     tumHatlarVerisi.features.forEach(f => {
         if (f.geometry.type !== "Point" && f.properties?.ref && f.properties?.colour) {
             const ref = f.properties.ref.toUpperCase();
-            if (!refRenkleri[ref]) {
+            if (hedefKodlar.includes(ref) && !refRenkleri[ref]) {
                 refRenkleri[ref] = f.properties.colour;
             }
         }
@@ -4473,7 +4422,8 @@ function tumTramvayHatlariGoster() {
             };
         },
         pointToLayer: (f, latlng) => {
-            let noktaRengi = f.properties?.colour;
+            const ref = (f.properties?.ref || "").toUpperCase();
+            let noktaRengi = refRenkleri[ref];
 
             if (!noktaRengi && f.properties?.["@relations"]) {
                 for (let r of f.properties["@relations"]) {
