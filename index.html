@@ -433,6 +433,15 @@ body { margin: 0; height: 100vh; display: flex; justify-content: center; align-i
         overflow-y: auto !important;
     }
 
+    .hat-butonu .akcaray-logo {
+    width: auto !important;
+    max-width: none !important;
+    height: 100%;
+    max-height: 28px;
+    flex-shrink: 0;
+    object-fit: contain;
+    border-radius: 0 !important;
+    }
     /* Sağ paneli alt kata taşıyarak ortadaki haritayı serbest bırak */
     /* Sağ kapsayıcıyı (İstasyon Paneli + İnşaat Butonu) tek blok halinde alta sabitle */
     .harita-sag-kapsayici {
@@ -487,15 +496,7 @@ body { margin: 0; height: 100vh; display: flex; justify-content: center; align-i
     pointer-events: none;
     z-index: 1000;
 }
-.hat-butonu .akcaray-logo {
-    width: auto !important;
-    height: auto !important;
-    max-width: none !important;
-    max-height: none !important;
-    flex-shrink: 0;
-    object-fit: contain;
-    border-radius: 0 !important;
-}
+
 </style></head><body>
 
 <div id="haritaModal"><div id="haritaKonteyner">
@@ -686,6 +687,7 @@ body { margin: 0; height: 100vh; display: flex; justify-content: center; align-i
         </div>
         <div class="alt-kollar" id="kocaeliIsletmeAltKollar">
             <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'KOC_T1', '#00A8E1')"><span id="t_kocT1"></span><img class="akcaray-logo" src="./img/Akçaray_logo.png" alt="Akçaray Logosu"></div></div>
+        </div>
     </div>
 
     <div class="insa-wrapper">
