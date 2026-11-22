@@ -533,7 +533,17 @@ body { margin: 0; height: 100vh; display: flex; justify-content: center; align-i
 .hat-butonu.alt-buton img[src="./img/Kocaeli_Metro_logo.svg"] {
     width: 36px;
     height: 36px;
-}  
+}
+.hat-butonu:has(#t_ankM123) .ank-m123-logolar {
+    gap: 4px;
+}
+
+.hat-butonu:has(#t_ankM123) .ank-m123-logolar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    object-fit: contain;
+}    
 </style></head><body>
 
 <div id="haritaModal"><div id="haritaKonteyner">
@@ -644,7 +654,7 @@ body { margin: 0; height: 100vh; display: flex; justify-content: center; align-i
         </div>
         <div class="alt-kollar" id="ankaraIsletmeAltKollar">
             <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'ANK_A1', '#009A4C')"><span id="t_ankA1"></span><img src="./img/Ankaray_logo.svg" alt="A1 Logosu" style="border-radius: 0;"></div></div>
-            <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'ANK_M123', '#E32726')"><span id="t_ankM123"></span><img src="./img/Ankara_M1_Metro_Hattı_Logosu.svg" alt="M1-M2-M3 Logosu" style="border-radius: 0;"></div></div>
+            <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'ANK_M123', '#E32726')"><span id="t_ankM123"></span><span class="ank-m123-logolar"><img src="./img/Ankara_M1_Metro_Hattı_Logosu.svg" alt="M1"><img src="./img/Ankara_M2_Metro_Hattı_Logosu.svg.webp" alt="M2"><img src="./img/Ankara_M3_Metro_Hattı_Logosu.svg.webp" alt="M3"></span></div></div>
             <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'ANK_M4', '#E91E76')"><span id="t_ankM4"></span><img src="./img/Ankara_M4_Metro_Hattı_Logosu.svg.webp" alt="M4 Logosu" style="border-radius: 0;"></div></div>
             <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'ANK_B1', '#00A49F')"><span id="t_b1"></span><img src="./img/Ankara_B1_Banliyö_Hattı_Logosu.svg" alt="Başkentray Logosu" style="border-radius: 0;"></div></div>
         </div>
@@ -657,8 +667,8 @@ body { margin: 0; height: 100vh; display: flex; justify-content: center; align-i
         </div>
         <div class="alt-kollar" id="ankaraInsaAltKollar">
             <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'ANK_DIK_NAT', '#009A4C')"><span id="t_ankDikimeviNatoyolu"></span><img src="./img/Ankaray_logo.svg" alt="Dikimevi - Natoyolu Logosu" style="border-radius: 0;"></div></div>
-            <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'ESB_METRO', '#e74c3c')"><span id="t_ankEsenboga"></span><img src="./img/Ankara_Metro_Logo.svg" alt="YHT Gar - Esenboğa Logosu" style="border-radius: 0;"></div></div>
-            <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'ANK_B1_UZATMA', '#00A49F')"><span id="t_ankB1Uzatma"></span><img src="./img/Ankara_B1_Line_Symbol.svg" alt="Başkentray Uzatma Logosu"></div></div>
+            <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'ESB_METRO', '#e74c3c')"><span id="t_ankEsenboga"></span><img src="./img/u_logo.png" alt="YHT Gar - Esenboğa Logosu" style="border-radius: 0;"></div></div>
+            <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'ANK_B1_UZATMA', '#00A49F')"><span id="t_ankB1Uzatma"></span><img src="./img/Ankara_B1_Banliyö_Hattı_Logosu.svg" alt="Başkentray Uzatma Logosu"></div></div>
         </div>
     </div>
 
