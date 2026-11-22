@@ -511,13 +511,13 @@ body { margin: 0; height: 100vh; display: flex; justify-content: center; align-i
     border-radius: 0;
     object-fit: contain;
 }
-.hat-butonu:has(#t_izmT1) {
+.hat-butonu:has(#t_izmT1, #t_izmT2) {
     height: 60px;
     align-items: center;
     gap: 12px;
 }
 
-.hat-butonu:has(#t_izmT1) img {
+.hat-butonu:has(#t_izmT1, #t_izmT2) img {
     width: auto;
     height: 33px;
     max-width: 115.5px;
@@ -677,10 +677,10 @@ body { margin: 0; height: 100vh; display: flex; justify-content: center; align-i
             <img src="./img/izmir_yazisiz.png" alt="İzmir" style="border-radius: 0;">
         </div>
         <div class="alt-kollar" id="izmirIsletmeAltKollar">
-            <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'IZM_M1', '#E30613')"><span id="t_izmM1"></span><img src="./img/Izmir_Logo.svg" alt="İzmir M1 Logosu" style="border-radius: 0;"></div></div>
+            <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'IZM_M1', '#E30613')"><span id="t_izmM1"></span><img src="./img/izmir_m2.png" alt="İzmir M1 Logosu" style="border-radius: 0;"></div></div>
             <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'IZM_IZBAN', '#00539F')"><span id="t_izmIzban"></span><img src="./img/Izmir_Logo.svg" alt="İZBAN Logosu" style="border-radius: 0;"></div></div>
             <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'IZM_T1', '#50AB43')"><span id="t_izmT1"></span><img src="./img/izmir_t1.png" alt="Karşıyaka Tramvayı Logosu" style="border-radius: 0;"></div></div>
-            <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'IZM_T2', '#50AB43')"><span id="t_izmT2"></span><img src="./img/Izmir_Logo.svg" alt="Konak Tramvayı Logosu" style="border-radius: 0;"></div></div>
+            <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'IZM_T2', '#50AB43')"><span id="t_izmT2"></span><img src="./img/izmir_t2.png" alt="Konak Tramvayı Logosu" style="border-radius: 0;"></div></div>
             <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'IZM_T3', '#0072CE')"><span id="t_izmT3"></span><img src="./img/Izmir_Logo.svg" alt="Çiğli Tramvayı Logosu" style="border-radius: 0;"></div></div>
         </div>
     </div>
