@@ -511,6 +511,18 @@ body { margin: 0; height: 100vh; display: flex; justify-content: center; align-i
     border-radius: 0;
     object-fit: contain;
 }
+.hat-butonu:has(#t_izmT1) {
+    gap: 12px;
+}
+
+.hat-butonu:has(#t_izmT1) img {
+    width: auto;
+    height: 40px;
+    max-width: 140px;
+    margin-left: auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
 </style></head><body>
 
 <div id="haritaModal"><div id="haritaKonteyner">
@@ -665,7 +677,7 @@ body { margin: 0; height: 100vh; display: flex; justify-content: center; align-i
         <div class="alt-kollar" id="izmirIsletmeAltKollar">
             <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'IZM_M1', '#E30613')"><span id="t_izmM1"></span><img src="./img/Izmir_Logo.svg" alt="İzmir M1 Logosu" style="border-radius: 0;"></div></div>
             <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'IZM_IZBAN', '#00539F')"><span id="t_izmIzban"></span><img src="./img/Izmir_Logo.svg" alt="İZBAN Logosu" style="border-radius: 0;"></div></div>
-            <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'IZM_T1', '#50AB43')"><span id="t_izmT1"></span><img src="./img/Izmir_Logo.svg" alt="Karşıyaka Tramvayı Logosu" style="border-radius: 0;"></div></div>
+            <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'IZM_T1', '#50AB43')"><span id="t_izmT1"></span><img src="./img/izmir_t1.png" alt="Karşıyaka Tramvayı Logosu" style="border-radius: 0;"></div></div>
             <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'IZM_T2', '#50AB43')"><span id="t_izmT2"></span><img src="./img/Izmir_Logo.svg" alt="Konak Tramvayı Logosu" style="border-radius: 0;"></div></div>
             <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="haritaAc(event, 'IZM_T3', '#0072CE')"><span id="t_izmT3"></span><img src="./img/Izmir_Logo.svg" alt="Çiğli Tramvayı Logosu" style="border-radius: 0;"></div></div>
         </div>
@@ -1498,6 +1510,12 @@ const hatOperatorleri = {
     "B1": "TCDD Taşımacılık", "B2": "TCDD Taşımacılık", "U3": "TCDD Taşımacılık",
     "T1": "Metro İstanbul", "T2": "İETT", "T3": "Metro İstanbul", "T4": "Metro İstanbul", "T5": "Metro İstanbul",
     "F1": "Metro İstanbul", "F2": "İETT", "F3": "Metro İstanbul", "F4": "Metro İstanbul",
+
+    "YHT_IST_ANK": "TCDD Taşımacılık",
+    "YHT_ANK_SIV": "TCDD Taşımacılık",
+    "YHT_EDR_CER": "TCDD Taşımacılık",
+    "YHT_ANK_KAR": "TCDD Taşımacılık",
+    
 };
 
 const hatYuklenicileri = {
@@ -1543,12 +1561,6 @@ const hatSorumlulari = {
     "mItuKagithane": "İBB Raylı Sistemler Daire Başkanlığı",
     "T_Esenler": "İBB Raylı Sistemler Daire Başkanlığı",
 
-    
-    "YHT_IST_ANK": "TCDD Taşımacılık",
-    "YHT_ANK_SIV": "TCDD Taşımacılık",
-    "YHT_EDR_CER": "TCDD Taşımacılık",
-    "YHT_ANK_KAR": "TCDD Taşımacılık",
-    
     "YHT_OSM_BUR": "TCDD",
     "YHT_BUR_BAN": "TCDD",
     "YHT_POL_IZM": "TCDD",
@@ -1558,6 +1570,8 @@ const hatSorumlulari = {
     "YHT_DEL_COR": "TCDD",
     "YHT_COR_SAM": "TCDD",
     "YHT_MER_GAZ": "TCDD",
+    
+    
  
 };
 
@@ -1843,6 +1857,13 @@ const hatUzunluklari = {
 
 "SAM_T1": "35.6 km",
 "SAM_T1_UZATMA": "12.5 km",
+
+"KOC_T1": "18.4 km",
+"KOC_GEBZE": "15.4 km",
+"KOC_KORFEZRAY": "29.1 km",
+"KOC_M4": "23 km",
+
+
 
 };
 const tumHatlarVerisi = { "type": "FeatureCollection", "features": [
