@@ -534,16 +534,24 @@ body { margin: 0; height: 100vh; display: flex; justify-content: center; align-i
     width: 36px;
     height: 36px;
 }
-.hat-butonu:has(#t_ankM123) .ank-m123-logolar {
-    gap: 8px;
-}
 
 .hat-butonu:has(#t_ankM123) .ank-m123-logolar img {
     width: 40px;
     height: 40px;
     border-radius: 0;
     object-fit: contain;
-}    
+}
+.hat-butonu:has(#t_ankM123) .ank-m123-logolar {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+}
+
+.hat-butonu:has(#t_ankM123) .ank-m123-logolar img + img {
+    margin-left: 8px !important;
+} 
 </style></head><body>
 
 <div id="haritaModal"><div id="haritaKonteyner">
@@ -624,14 +632,14 @@ body { margin: 0; height: 100vh; display: flex; justify-content: center; align-i
                 </div>
                 <div class="ibb-alt-kollar" id="digerSehirlerAltKollar">
                     <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('adanaSayfaIcerik', 'adana')"><span id="t_baslikGirisAdana"></span><img src="./img/Adana_Metro_logo.svg" alt="Adana Metro Logosu" style="border-radius: 0;"></div></div>
-                    <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('gaziantepSayfaIcerik', 'gaziantep')"><span id="t_baslikGirisGaziantep"></span></div></div>
+                    <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('gaziantepSayfaIcerik', 'gaziantep')"><span id="t_baslikGirisGaziantep"></span><img src="./img/" alt="Kayseray Logosu" style="border-radius: 0;"></div></div>
                     <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('kayseriSayfaIcerik', 'kayseri')"><span id="t_kayseri">Kayseri</span><img src="./img/Kayseray_logo.svg" alt="Kayseray Logosu" style="border-radius: 0;"></div></div>
                     <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('samsunSayfaIcerik', 'samsun')"><span id="t_samsun">Samsun</span><img src="./img/samulaş.png" alt="SAMULAŞ Logosu" style="border-radius: 0;"></div></div>
-                    <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('antalyaSayfaIcerik', 'antalya')"><span id="t_baslikGirisAntalya"></span></div></div>
-                    <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('eskisehirSayfaIcerik', 'eskisehir')"><span id="t_baslikGirisEskisehir"></span></div></div>
-                    <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('konyaSayfaIcerik', 'konya')"><span id="t_baslikGirisKonya"></span></div></div>
-                    <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('trabzonSayfaIcerik', 'trabzon')"><span id="t_baslikGirisTrabzon"></span></div></div>
-                    <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('sakaryaSayfaIcerik', 'sakarya')"><span id="t_baslikGirisSakarya"></span></div></div>
+                    <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('antalyaSayfaIcerik', 'antalya')"><span id="t_baslikGirisAntalya"></span><img src="./img/" alt="Kayseray Logosu" style="border-radius: 0;"></div></div>
+                    <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('eskisehirSayfaIcerik', 'eskisehir')"><span id="t_baslikGirisEskisehir"></span><img src="./img/" alt="Kayseray Logosu" style="border-radius: 0;"></div></div>
+                    <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('konyaSayfaIcerik', 'konya')"><span id="t_baslikGirisKonya"></span><img src="./img/" alt="Kayseray Logosu" style="border-radius: 0;"></div></div>
+                    <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('trabzonSayfaIcerik', 'trabzon')"><span id="t_baslikGirisTrabzon"></span><img src="./img/trabzon.png" alt="Kayseray Logosu" style="border-radius: 0;"></div></div>
+                    <div class="alt-buton-wrapper"><div class="hat-butonu alt-buton" onclick="sehirSayfasiAc('sakaryaSayfaIcerik', 'sakarya')"><span id="t_baslikGirisSakarya"></span><img src="./img/sakarya.png" alt="Kayseray Logosu" style="border-radius: 0;"></div></div>
                 </div>
             </div>
         </div>
