@@ -3814,10 +3814,12 @@ function hesaplaCizgiKalinligi(z, hatKodu = null) {
 // ========================================================
 function haritayiIlkHazirla() {
     if (!haritaYuklendi) {
-        let renkliHarita = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap', maxZoom: 19 });
-        let griHarita = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap', maxZoom: 19, className: 'gri-harita' });
-        let karanlikHarita = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap', maxZoom: 19, className: 'karanlik-harita' });
+        const tileUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+const osmUrl  = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 
+let renkliHarita   = L.tileLayer(osmUrl,  { attribution: '&copy; OpenStreetMap', maxZoom: 19 });
+let griHarita      = L.tileLayer(tileUrl, { attribution: '&copy; OpenStreetMap &copy; CARTO', maxZoom: 19 });
+let karanlikHarita = L.tileLayer(tileUrl, { attribution: '&copy; OpenStreetMap &copy; CARTO', maxZoom: 19, className: 'karanlik-harita' });
         map = L.map('map', { center: [41.015, 28.95], zoom: 11, layers: [renkliHarita] });
         L.control.layers({
             "Renkli Harita": renkliHarita, 
